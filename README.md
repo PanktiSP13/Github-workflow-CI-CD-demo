@@ -26,7 +26,8 @@ Each file:
 1. Push your code to GitHub.
 2. Go to your repo's **Actions** tab.
 3. Select the workflow (e.g., `Build Debug APK`).
-4. Choose the branch and click **“Run workflow”**.
+4. Click **“Run workflow”**.
+5. Choose the branch and click **“Run workflow”**.
 
 GitHub Actions will then:
 - Build your project for the selected variant
