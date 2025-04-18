@@ -1,0 +1,33 @@
+name: Build PreProd APK
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build-preprod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - name: Grant permission to Gradle
+        run: chmod +x ./gradlew
+
+      - name: Build PreProd APK
+        run: ./gradlew assemblePreProd
+
+      - name: Upload PreProd APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-preprod-apk
+          path: app/build/outputs/apk/preProd/*.apk
