@@ -26,12 +26,12 @@ jobs:
       - name: Upload to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
-        appId: ${{ secrets.FIREBASE_APP_ID }}
-        token: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-        groups: ""
-        testers: ${{ secrets.TESTERS_EMAILS }}
-        releaseNotes: "Latest release build"
-        file: app/build/outputs/apk/release/app-release.apk
+          appId: ${{ secrets.FIREBASE_APP_ID }}
+          token: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          groups: ""
+          testers: ${{ secrets.TESTERS_EMAILS }}
+          releaseNotes: "Latest release build"
+          file: app/build/outputs/apk/release/app-release.apk
 
       - name: Upload Release APK
         uses: actions/upload-artifact@v4
