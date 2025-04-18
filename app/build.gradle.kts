@@ -47,13 +47,13 @@ android {
 
         create("preProd") {
             isMinifyEnabled = true
-            applicationIdSuffix = ".preProd"
+//            applicationIdSuffix = ".preProd"
             isDebuggable = true
         }
 
         getByName("debug") {
             isMinifyEnabled = true
-            applicationIdSuffix = ".debug"
+//            applicationIdSuffix = ".debug"
             isDebuggable = true
         }
 
