@@ -28,7 +28,7 @@ jobs:
         with:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
-          testers: ${{ secrets.TESTERS_EMAILS }}
+          groups: testers
           releaseNotes: "Latest preProd build"
           file: app/build/outputs/apk/preProd/app-preProd.apk
 
